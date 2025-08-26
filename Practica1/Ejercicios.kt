@@ -34,5 +34,24 @@ fun EvaluarEmp() {
 
 }
 
+//Segunda Parte: Piedra, Papel y Tijera
 
+fun PPT() {
+    val opciones = listOf("piedra", "papel", "tijera")
+    val computadora = opciones[Random.nextInt(opciones.size)] //tomando una posicion random del 0 al 2 y el valor de la lista se agrega a la varibale
+
+    print("Elija piedra, papel o tijera: ")
+    val usuario = readln().lowercase()   //leyendo y transformando a minúsculas
+    println("Computadora eligió: $computadora")
+
+    when {
+        usuario == computadora -> println("Resultado: Empate")
+        (usuario == "piedra" && computadora == "tijera") ||
+        (usuario == "papel" && computadora == "piedra") ||
+        (usuario == "tijera" && computadora == "papel") -> println("Resultado: Ganaste")
+        usuario in opciones -> println("Resultado: Perdiste")
+        else -> println("Opción inválida.")
+    }
 }
+
+ 
