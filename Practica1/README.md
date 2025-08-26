@@ -34,6 +34,10 @@ El usuario dispone de 5 intentos con pistas (mayor o menor).
 Finaliza cuando el usuario acierta o agota los intentos.
 
 El programa principal utiliza un menú interactivo que permite seleccionar y ejecutar cada una de estas funcionalidades.
+
+¿Cómo ejecutar? 
+
+Dentro de la consola copie el comando para una ejecución directa: kotlinc -script Ejercicios.kt
  
 El sistema mostrará un menú principal:
 
