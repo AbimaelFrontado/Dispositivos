@@ -128,6 +128,28 @@ fun adivinar() {
     println("Game Over, el número era $Secreto")
 }
 
+//función main 
+fun main() {
+    while (true) {
+        println("\n==== Menú Principal ====")
+        println("1. Evaluación de Empleados")
+        println("2. Piedra, Papel o Tijera")
+        println("3. Calculadora")
+        println("4. Adivina el Número")
+        println("5. Salir")
+        print("Seleccione una opción: ")
 
+        when (readln()) {
+            "1" -> EvaluarEmp()
+            "2" -> PPT()
+            "3" -> calculadora()
+            "4" -> adivinar()
+            "5" -> {
+                println("Saliendo del programa ")
+                break
+            }
+            else -> println("Opción inválida ")
+        }
+    }
 
  
