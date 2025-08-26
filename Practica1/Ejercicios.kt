@@ -54,6 +54,8 @@ fun PPT() {
     }
 }
 
+//Tercera Parte: Calculadora 
+
 fun Numeros(): Pair<Double, Double> { //función auxiliar para la calculadora
     print("Ingrese el primer número: ")
     val a = readLine().toDouble()  
@@ -98,6 +100,33 @@ fun calculadora() {
     }
 }
 
+
+//Parte Cuatro: Adivinar Número 
+
+fun adivinar() {
+    val Secreto = Random.nextInt(1, 31) //Se Genera un número 
+    var intentos = 5
+
+    println("He pensado un número entre 1 y 30. Tienes 5 intentos.")
+
+    while (intentos > 0) {
+        print("Ingresa tu número: ")
+        val intento = readLine().toInt() 
+        
+        when {
+            intento == numeroSecreto -> {
+                println("  Adivinaste el número.")
+                return
+            }
+            intento < numeroSecreto -> println("El número secreto es mayor.")
+            else -> println("El número secreto es menor.")
+        }
+        intentos--
+        println("Te quedan $intentos intentos ")
+    }
+
+    println("Game Over, el número era $Secreto")
+}
 
 
 
