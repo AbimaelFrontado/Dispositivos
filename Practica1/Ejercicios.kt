@@ -1,3 +1,4 @@
+import kotlin.random.Random //Importando random
 // Primera parte: Evaluación Empleados
 fun evaluarEmp() {
     print("Ingrese su salario mensual: ")
