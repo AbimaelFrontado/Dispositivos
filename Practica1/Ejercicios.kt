@@ -54,4 +54,51 @@ fun PPT() {
     }
 }
 
+fun Numeros(): Pair<Double, Double> { //función auxiliar para la calculadora
+    print("Ingrese el primer número: ")
+    val a = readLine().toDouble()  
+    print("Ingrese el segundo número: ")
+    val b = readLine().toDouble()
+    return Pair(a, b)
+} 
+fun calculadora() {
+    while (true) {
+        println("\n==== Menú ====")
+        println("1. Suma")
+        println("2. Resta")
+        println("3. Multiplicación")
+        println("4. División")
+        println("5. Salir")
+        print("Seleccione una opción: ")
+
+        when (readLine()) {
+            "1" -> {
+                val (a, b) = Numeros()
+                println("Resultado: ${a + b}")
+            }
+            "2" -> {
+                val (a, b) = Numeros()
+                println("Resultado: ${a - b}")
+            }
+            "3" -> {
+                val (a, b) = Numeros()
+                println("Resultado: ${a * b}")
+            }
+            "4" -> {
+                val (a, b) = Numeros()
+                if (b != 0.0) println("Resultado: ${a / b}")
+                else println("Error: División entre 0 no permitida")
+            }
+            "5" -> {
+                println("Saliendo de la calculadora...")
+                break
+            }
+            else -> println("Opción inválida.")
+        }
+    }
+}
+
+
+
+
  
