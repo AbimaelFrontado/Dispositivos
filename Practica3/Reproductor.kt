@@ -1,3 +1,9 @@
+/*
+Descripción: Creando un reproductor simple de música
+Abimael Ernesto Frontado Fajardo
+Fecha de creación: 11/09/2025
+Última modificación: 12/09/2025
+*/
 package com.abi.myapplication
 
 import android.media.MediaPlayer
