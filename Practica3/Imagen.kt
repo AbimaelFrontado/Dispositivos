@@ -44,7 +44,7 @@ class MainActivity : ComponentActivity() {
 fun ImagenConToast() {
     val context = LocalContext.current
     Image(
-        painter = painterResource(id = R.drawable.perrito), // tu imagen en res/drawable
+        painter = painterResource(id = R.drawable.perrito),  
         contentDescription = "Imagen de perrito",
         modifier = Modifier
             .size(400.dp)
