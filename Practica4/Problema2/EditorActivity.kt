@@ -32,5 +32,34 @@ class EditorActivity : AppCompatActivity() {
         }
         
     }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_editor)
+
+        // Inicializar las vistas
+        notaEditText = findViewById(R.id.notaEditText)
+        compartirButton = findViewById(R.id.compartirButton)
+
+        // Restaurar el estado de la nota si la actividad fue recreada
+        if (savedInstanceState != null) {
+            notaEditText.setText(savedInstanceState.getString(NOTE_KEY))
+        }
+
+        compartirButton.setOnClickListener {
+            // Enviar la nota a OpcionesActivity
+            val nota = notaEditText.text.toString()
+            val intent = Intent(this, OpcionesActivity::class.java).apply {
+                putExtra("nota", nota)
+            }
+            startForResult.launch(intent)
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        // Guardar el texto de la nota en el Bundle
+        outState.putString(NOTE_KEY, notaEditText.text.toString())
+    }
     
 }
