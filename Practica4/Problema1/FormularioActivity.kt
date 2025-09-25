@@ -21,4 +21,17 @@ import java.io.Serializable
  
 class FormularioActivity : AppCompatActivity() {
  
+    private lateinit var nombreEditText: EditText
+    private lateinit var edadEditText: EditText
+    private lateinit var ciudadEditText: EditText
+    private lateinit var correoEditText: EditText
+    private lateinit var continuarButton: Button
+
+    // Contrato para manejar el resultado de la siguiente actividad
+    private val startForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            // El resultado de la segunda actividad indica que el perfil fue guardado
+            Toast.makeText(this, "Perfil guardado correctamente", Toast.LENGTH_SHORT).show()
+        }
+    } 
 }
