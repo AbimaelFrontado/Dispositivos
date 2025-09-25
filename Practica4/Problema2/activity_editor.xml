@@ -7,5 +7,32 @@
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".EditorActivity">
- 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editor de Nota Rápida"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/notaEditText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:hint="Escribe tu nota aquí..."
+        android:autofillHints="Texto"
+        android:inputType="textMultiLine"
+        android:padding="8dp"/>
+
+    <Button
+        android:id="@+id/compartirButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Compartir"/>
+
 </LinearLayout>
